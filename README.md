@@ -1,16 +1,13 @@
 # easydb
 一个c++数据库连接池,将c++下的mysql查询变得易用的项目
 
-
-
+```c++
 #include <iostream>
 
 #include "pool.h"
 #include "easy_db.h"
 
 #define PASSWORD ""
-
-
 using vec_map = std::vector<std::map<std::string, std::string>>;
 void fuc(int i)
 {
@@ -83,5 +80,8 @@ int main()
 	std::this_thread::sleep_for(std::chrono::seconds(50));
 
 }
+
+
+```
 
 
