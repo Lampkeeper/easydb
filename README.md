@@ -60,7 +60,9 @@ static Page					queryPage(int pageNumber, int pageSize, std::string select, std:
 
 <br>
 ## SQL参数自动构造，使用jdbc类似的问号填充方式 ##
+```
 std::vector<lpkp::Record> resList = lpkp::easy_db::queryListR("select * from City where CityName = ?", "成都");
+```
 <br>
 ## 事务支持 ##
 直接使用 easy_db::tx( lambda 表达式 ),
