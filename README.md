@@ -1,8 +1,64 @@
 # easydb
-一个c++数据库连接池,将c++下的mysql查询变得易用的项目(qq: 654320149)
+一个c++数据库连接池,将c++下的mysql查询变得易用的项目
+<br>
 2020年4月24日 19:28:33
+<br>
 后续将继续更新，加入此项目或者有好的建议( qq: 654320149 )
+<br>
+## 已经有一个简单版本的MYSQL数据库连接池 ##
+只需要 db.start()，即可启动数据库连接池
+<br>
+## 线程自动分配MYSQL数据库连接##
+直接使用easy_db中的静态查询方法
+```c++
+/*返回 string*/
+static std::string queryStr(const char* sql);
 
+/*返回 boolean*/
+static bool queryBoolean(const char* sql);
+
+/*返回 int*/
+static int					queryInt(const char* sql);
+
+/*返回 unsigned int*/
+static unsigned int			queryUInt(const char* sql);
+
+/*返回 long*/
+static long					queryLong(const char* sql);
+
+/*返回 unsigned long*/
+static unsigned long		queryULong(const char* sql);
+
+/*返回 long long*/
+static long long			queryLLong(const char* sql);
+
+/*返回 unsigned long long*/
+static unsigned long long	queryULLong(const char* sql);
+
+/*返回 double*/
+static double				queryDouble(const char* sql);
+
+/*返回 long double*/
+static long double			queryLDouble(const char* sql);
+
+/*返回 float*/
+static float				queryFloat(const char* sql);
+
+/*返回 map*/
+static r_map				queryMap(const char* sql);
+
+/*返回 list*/
+static r_vec_map			queryList(const char* sql);
+
+static Record				queryMapR(const char* sql);
+
+static std::vector<Record>	queryListR(const char* sql);
+
+/*分页查询*/
+static Page					queryPage(int pageNumber, int pageSize, std::string select, std::string sqlExcept);
+```
+<br>
+<br>
 
 ```c++
 #include <iostream>
