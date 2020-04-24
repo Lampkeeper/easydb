@@ -84,7 +84,7 @@ lpkp::easy_db::tx( [=]()->int {
 ...
 ## 将支持更多的主流数据库
 ...
-## 加入项目(qq: 654320149)
+## 测试demo代码
 
 ```c++
 #include <iostream>
