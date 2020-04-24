@@ -1,8 +1,8 @@
 #pragma once
-#include "db.h"
-#include "mysql_dialect.h"
+#include "lpkp/db.h"
+#include "lpkp/mysql_dialect.h"
 
-namespace gzh
+namespace lpkp
 {
 	class easy_db
 	{
@@ -15,17 +15,17 @@ namespace gzh
 		/*执行单行sql命令*/
 		static int excute(const char* sql)
 		{
-			return gzh::db::excute_base(sql,strlen(sql));
+			return db::excute_base(sql,strlen(sql));
 		}
 		/*执行单行sql命令*/
 		static int excute(std::string& sql)
 		{
-			return gzh::db::excute_base(sql.c_str(), sql.length());
+			return db::excute_base(sql.c_str(), sql.length());
 		}
 		/*批量执行*/
 		static r_vec_int excute_batch(const std::vector<std::string>& sqlList)
 		{
-			return gzh::db::batch_excute_base(sqlList);
+			return db::batch_excute_base(sqlList);
 		}
 
 		/*插入数据*/

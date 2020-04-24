@@ -11,14 +11,13 @@
 #include <algorithm>
 
 
-#include "gzh_error.h"
+#include "lpkp/lpkp_error.h"
 #include "mysql.h"
-#include "gzh_error.h"
-#include "mysql_exception.h"
-#include "client_exception.h"
-#include "null_result_exception.h"
+#include "lpkp/lpkp_error.h"
+#include "lpkp/easydb_exception.h"
 
-namespace gzh
+
+namespace lpkp
 {
 	class pool
 	{
