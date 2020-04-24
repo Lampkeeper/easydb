@@ -5,7 +5,7 @@
 <br>
 后续将继续更新，加入此项目或者有好的建议( qq: 654320149 )
 <br>
-## 已经有一个简单版本的MYSQL数据库连接池 ##
+## 已经有一个简单版本的MYSQL数据库连接池##
 只需要 db.start()，即可启动数据库连接池
 <br>
 ## 线程自动分配MYSQL数据库连接##
@@ -58,13 +58,12 @@ static std::vector<Record>	queryListR(const char* sql);
 static Page					queryPage(int pageNumber, int pageSize, std::string select, std::string sqlExcept);
 ```
 
-<br>
-## SQL参数自动构造，使用jdbc类似的问号填充方式 ##
+## SQL参数自动构造，使用jdbc类似的问号填充方式##
 ```
 std::vector<lpkp::Record> resList = lpkp::easy_db::queryListR("select * from City where CityName = ?", "成都");
 ```
-<br>
-## 事务支持 ##
+
+## 事务支持##
 直接使用 easy_db::tx( lambda 表达式 ),
 在lamdba表达式中的所有sql代码自动嵌套支持事务
 示例:
@@ -80,12 +79,12 @@ lpkp::easy_db::tx( [=]()->int {
 			});
 ```
 后续将支持更多的事务特性
-<br>
-## 数据库表自动映射到Struct代码正在测试中 ##
-<br>
-## 将支持更多的主流数据库 ##
-<br>
-## 加入项目(qq: 654320149) ## 
+
+## 数据库表自动映射到Struct代码正在测试中##
+...
+## 将支持更多的主流数据库##
+...
+## 加入项目(qq: 654320149)## 
 
 ```c++
 #include <iostream>
