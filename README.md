@@ -66,7 +66,8 @@ std::vector<lpkp::Record> resList = lpkp::easy_db::queryListR("select * from Cit
 直接使用 easy_db::tx( lambda 表达式 ),
 在lamdba表达式中的所有sql代码自动嵌套支持事务
 示例:
-```c++
+
+```
 lpkp::easy_db::tx( [=]()->int {
 			lpkp::easy_db::excute_batch(sqlList);
 			lpkp::easy_db::excute("insert into City(CityName,CityNo,rd) values(?,?,now())", "北京", 43);
